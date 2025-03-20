@@ -11,8 +11,6 @@
             document.getElementById("capa").classList.toggle("flip");
             setTimeout(() => {
                 document.getElementById("page1").style.display = "block";
-                document.getElementById("btnCapa").style.display = "none";
-                document.getElementById("btnPg1").style.display = "block";
 
             }, 300);
         }
@@ -20,9 +18,8 @@
         function pg1_to_pg2() {
             document.getElementById("page1").classList.toggle("flip");
             setTimeout(() => {
-                document.getElementById("page1").style.display = "block";
-                document.getElementById("btnCapa").style.display = "none";
-                document.getElementById("btnPg1").style.display = "block";
+                document.getElementById("page2").style.display = "block";
+                document.getElementById("page1").style.display = "none";
 
             }, 300);
         }
@@ -31,17 +28,18 @@
 
 <body>
     <div class="book">
-        <div class="page" id="capa">
+        <div class="page" id="capa" onclick="capa_to_pg1()">
             <div class="front" style="background-image: url('imagens/04.JPG');  background-size: cover;">
                 <div class="container">
                     <h1>Adriele & Cristian</h1>
-                    <p>"Cada página deste livro é um pedacinho da nossa história, cheia de amor, saudade e momentos inesquecíveis. Que venham muitos meses e anos ao seu lado! ❤️"</p>
+                    <p>"Cada página deste livro é um pedacinho da nossa história, cheia de amor, saudade e momentos
+                        inesquecíveis. Que venham muitos meses e anos ao seu lado! ❤️"</p>
                 </div>
             </div>
             <div class="back">
             </div>
         </div>
-        <div class="page" id="page1" style="display: none;">
+        <div class="page" id="page1" style="display: none;" onclick="pg1_to_pg2()">
             <div class="front" style="background-image: url('imagens/04.JPG');  background-size: cover;">
                 <div class="container">
                     <h1>Mês 1</h1>
@@ -65,28 +63,39 @@
             </div>
         </div>
 
-        <div class="page" id="page2" style="display: none;">
-            <div class="front">
-                <h2>2</h2>
-                <p>2</p>
+        <div class="page" id="page2" style="display: none;" onclick="pg2_to_pg3()">
+            <div class="front" style="background-image: url('imagens/04.JPG');  background-size: cover;">
+                <div class="container">
+                    <h1>Mês 2</h1>
+                    <div class="img-coracao">
+                        <div class="heart-container">
+                            <img src="imagens/02.JPG" alt="Nossa foto do primeiro mês">
+                        </div>
+                    </div>
+                    <p>No segundo mês, eu já estava longe de você, mas meu sentimento permanecia inabalável. A distância
+                        nos
+                        separava fisicamente, mas dentro de mim, você nunca esteve longe. Eu sabia que você sentia medo
+                        e
+                        tristeza, e eu também sentia o peso da saudade, mas nos agarrávamos à certeza de que logo nos
+                        veríamos de novo – já tínhamos uma data para o nosso reencontro.
+                        A distância maltratava, os momentos juntos eram raros, mas nosso amor resistia. Chegou o Natal
+                        e,
+                        depois, o Ano Novo… comemoramos duas vezes, por causa do fuso, como se o universo nos desse mais
+                        tempo para estarmos juntos, ainda que à distância. Apesar de separados, estávamos sempre
+                        conectados,
+                        contando os dias, as horas, os segundos para o momento de nos reencontrarmos e vivermos, de
+                        novo,
+                        aquilo que só nós dois entendemos...</p>
+                </div>
             </div>
             <div class="back">
             </div>
+
+
         </div>
 
-        <div class="page" id="page3" style="display: none;">
-            <div class="front">
-                <h2>3</h2>
-                <p>3</p>
-            </div>
-            <div class="back">
-            </div>
-        </div>
-    </div>
 
 
-    <button id="btnCapa" onclick="capa_to_pg1()">Abrir Nosso Livro</button>
-    <button id="btnPg1" style="display: none;" onclick="pg1_to_pg2()">Próxima página</button>
 
 </body>
 
