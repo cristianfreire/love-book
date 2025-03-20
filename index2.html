@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Livro de Amor ❤️</title>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        function capa_to_pg1() {
+            document.getElementById("capa").classList.toggle("flip");
+            setTimeout(() => {
+                document.getElementById("page1").style.display = "block";
+                document.getElementById("btnCapa").style.display = "none";
+                document.getElementById("btnPg1").style.display = "block";
+
+            }, 300);
+        }
+
+        function pg1_to_pg2() {
+            document.getElementById("page1").classList.toggle("flip");
+            setTimeout(() => {
+                document.getElementById("page1").style.display = "block";
+                document.getElementById("btnCapa").style.display = "none";
+                document.getElementById("btnPg1").style.display = "block";
+
+            }, 300);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="book">
+        <div class="page" id="capa">
+            <div class="front" style="background-image: url('imagens/04.JPG');  background-size: cover;">
+                <div class="container">
+                    <h1>Adriele & Cristian</h1>
+                    <p>"Cada página deste livro é um pedacinho da nossa história, cheia de amor, saudade e momentos inesquecíveis. Que venham muitos meses e anos ao seu lado! ❤️"</p>
+                </div>
+            </div>
+            <div class="back">
+            </div>
+        </div>
+        <div class="page" id="page1" style="display: none;">
+            <div class="front" style="background-image: url('imagens/04.JPG');  background-size: cover;">
+                <div class="container">
+                    <h1>Mês 1</h1>
+                    <div class="img-coracao">
+                        <div class="heart-container">
+                            <img src="imagens/01.JPG" alt="Nossa foto do primeiro mês">
+                        </div>
+                    </div>
+                    <p>Nosso primeiro mês foi um turbilhão de emoções. Estávamos imensamente felizes por termos nos
+                        encontrado, mas, ao mesmo tempo, seu coração carregava a tristeza da minha partida para o Sul.
+                        Eu via nos seus olhos o medo da distância, mas também enxergava o brilho do nosso sentimento
+                        crescendo a cada dia.
+                        O que eu sentia por você era muito maior do que qualquer distância. Nunca antes eu havia dado
+                        uma aliança a alguém, mas com você foi diferente. Desde o primeiro momento, eu soube que era
+                        especial, que queria te ter para sempre ao meu lado. Cada despedida era dolorosa, mas cada
+                        pensamento sobre você aquecia meu coração. E, todos os dias, minha maior vontade era apenas uma:
+                        te ver novamente e sentir o seu abraço mais uma vez...</p>
+                </div>
+            </div>
+            <div class="back">
+            </div>
+        </div>
+
+        <div class="page" id="page2" style="display: none;">
+            <div class="front">
+                <h2>2</h2>
+                <p>2</p>
+            </div>
+            <div class="back">
+            </div>
+        </div>
+
+        <div class="page" id="page3" style="display: none;">
+            <div class="front">
+                <h2>3</h2>
+                <p>3</p>
+            </div>
+            <div class="back">
+            </div>
+        </div>
+    </div>
+
+
+    <button id="btnCapa" onclick="capa_to_pg1()">Abrir Nosso Livro</button>
+    <button id="btnPg1" style="display: none;" onclick="pg1_to_pg2()">Próxima página</button>
+
+</body>
+
+</html>
