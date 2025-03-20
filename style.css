@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 body {
+    min-height: 100vh;  /* Em vez de height: 100vh, use min-height */
     font-family: 'Arial', sans-serif;
     text-align: center;
     background-color: #ffebf0;
@@ -12,8 +13,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 .container {
     max-width: 90%;
