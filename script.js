@@ -1,4 +1,4 @@
-// Seleciona os elementos
+const myMusic= document.getElementById("music");
 const page0 = document.getElementById('page0');
 const page1 = document.getElementById('page1');
 const page2 = document.getElementById('page2');
@@ -21,6 +21,8 @@ page0.addEventListener('click', function (event) {
       document.getElementById(`page${currentPage}`).classList.toggle("flip");
       currentPage++;
       console.log(`page${currentPage}`);
+      myMusic.play();
+
     }
 
   }
