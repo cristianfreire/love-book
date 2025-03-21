@@ -12,7 +12,7 @@ capa.addEventListener('click', function (event) {
   if (clickPosition < middle) {
     console.log('Clique à esquerda');
   } else {
-    capa.classList.add("flip");
+    capa.classList.toggle("flip");
     page1.classList.add("fade-in");
     page1.style.display = "block";
   }
@@ -26,7 +26,7 @@ page1.addEventListener('click', function (event) {
 
   if (clickPosition < middle) {
     // Voltar para capa
-    capa.classList.remove("flip");
+    capa.classList.toggle("flip");
     page1.classList.remove("fade-in");
     page1.classList.add("fade-out");
 
@@ -37,7 +37,7 @@ page1.addEventListener('click', function (event) {
 
   } else {
     // Ir para a página 2
-    page1.classList.add("flip");
+    page1.classList.toggle("flip");
     page2.style.display = "block";
     page2.classList.add("fade-in");
   }
@@ -54,7 +54,7 @@ page2.addEventListener('click', function (event) {
 
   if (clickPosition < middle) {
     // Voltar para pg1
-    page1.classList.remove("flip");
+    page1.classList.toggle("flip");
     page2.classList.remove("fade-in");
     page2.classList.add("fade-out");
 
@@ -65,7 +65,7 @@ page2.addEventListener('click', function (event) {
 
   } else {
     // Ir para a página 2
-    page2.classList.add("flip");
+    page2.classList.toggle("flip");
     page3.style.display = "block";
     page3.classList.add("fade-in");
   }
