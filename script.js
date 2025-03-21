@@ -15,6 +15,9 @@ capa.addEventListener('click', function (event) {
     capa.classList.toggle("flip");
     page1.classList.add("fade-in");
     page1.style.display = "block";
+    setTimeout(() => {
+      page1.classList.remove("fade-in")
+    }, 1000);
   }
 });
 
@@ -26,16 +29,14 @@ page1.addEventListener('click', function (event) {
 
   if (clickPosition < middle) {
     // Voltar para capa
-    page1.classList.remove("fade-in");
     capa.classList.toggle("flip");
     page1.classList.add("fade-out");
     capa.classList.add("fade-in");
-
-    capa.addEventListener("animationend", () => {
+    setTimeout(() => {
       page1.style.display = "none";
-      page1.classList.remove("fade-out", "fade-in");
-    }, { once: true });
-
+      capa.classList.remove("fade-in")
+      page1.classList.remove("fade-out")
+    }, 1000);
   } else {
     // Ir para a página 2
     page1.classList.toggle("flip");
@@ -55,14 +56,11 @@ page2.addEventListener('click', function (event) {
 
   if (clickPosition < middle) {
     // Voltar para pg1
-    page1.classList.toggle("flip");
-    page2.classList.remove("fade-in");
-    page2.classList.add("fade-out");
-
-    page2.addEventListener("animationend", () => {
+    page2.classList.toggle("flip");
+    setTimeout(() => {
       page2.style.display = "none";
-      page2.classList.remove("fade-out", "fade-in");
-    }, { once: true });
+      page1.style.display = "block";
+    }, 300);
 
   } else {
     // Ir para a página 2
