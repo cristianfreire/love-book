@@ -26,11 +26,12 @@ page1.addEventListener('click', function (event) {
 
   if (clickPosition < middle) {
     // Voltar para capa
-    capa.classList.toggle("flip");
     page1.classList.remove("fade-in");
+    capa.classList.toggle("flip");
     page1.classList.add("fade-out");
+    capa.classList.add("fade-in");
 
-    page1.addEventListener("animationend", () => {
+    capa.addEventListener("animationend", () => {
       page1.style.display = "none";
       page1.classList.remove("fade-out", "fade-in");
     }, { once: true });
