@@ -6,29 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosso Livro de Amor ❤️</title>
     <link rel="stylesheet" href="style2.css">
-    <script>
-        function capa_to_pg1() {
-            document.getElementById("capa").classList.toggle("flip");
-            setTimeout(() => {
-                document.getElementById("page1").style.display = "block";
-
-            }, 300);
-        }
-
-        function pg1_to_pg2() {
-            document.getElementById("page1").classList.toggle("flip");
-            setTimeout(() => {
-                document.getElementById("page2").style.display = "block";
-                document.getElementById("page1").style.display = "none";
-
-            }, 300);
-        }
-    </script>
+    
 </head>
 
 <body>
     <div class="book">
-        <div class="page" id="capa" onclick="capa_to_pg1()">
+        <div class="page" id="capa" >
             <div class="front" style="background-image: url('imagens/04.JPG');  background-size: cover;">
                 <div class="container">
                     <h1>Adriele & Cristian</h1>
@@ -40,7 +23,7 @@
             </div>
         </div>
 
-        <div class="page" id="page1" style="display: none;" onclick="pg1_to_pg2()">
+        <div class="page" id="page1" style="display: none;">
             <div class="front" style="background-image: url('imagens/04.JPG');  background-size: cover;">
                 <div class="container">
                     <h1>Mês 1</h1>
@@ -64,7 +47,7 @@
             </div>
         </div>
 
-        <div class="page" id="page2" style="display: none;" onclick="pg2_to_pg3()">
+        <div class="page" id="page2" style="display: none;">
             <div class="front" style="background-image: url('imagens/04.JPG');  background-size: cover;">
                 <div class="container">
                     <h1>Mês 2</h1>
@@ -95,7 +78,7 @@
 
     </div>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
