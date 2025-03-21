@@ -1,23 +1,27 @@
 // Seleciona os elementos
-const capa = document.getElementById('capa');
+const page0 = document.getElementById('page0');
 const page1 = document.getElementById('page1');
 const page2 = document.getElementById('page2');
 const page3 = document.getElementById('page3');
+const page4 = document.getElementById('page4');
 
-capa.addEventListener('click', function (event) {
-  const storyRect = capa.getBoundingClientRect();
+let currentPage = 0;
+const totalPages = 6;
+
+page0.addEventListener('click', function (event) {
+  const storyRect = page0.getBoundingClientRect();
   const clickPosition = event.clientX;
   const middle = storyRect.left + storyRect.width / 2;
 
   if (clickPosition < middle) {
     console.log('Clique à esquerda');
   } else {
-    capa.classList.toggle("flip");
-    page1.classList.add("fade-in");
-    page1.style.display = "block";
-    setTimeout(() => {
-      page1.classList.remove("fade-in")
-    }, 1000);
+    if (currentPage <= totalPages) {
+      console.log(`page${currentPage}`);
+      document.getElementById(`page${currentPage}`).classList.toggle("flip");
+      currentPage++;
+    }
+
   }
 });
 
@@ -28,20 +32,17 @@ page1.addEventListener('click', function (event) {
   const middle = storyRect.left + storyRect.width / 2;
 
   if (clickPosition < middle) {
-    // Voltar para capa
-    capa.classList.toggle("flip");
-    page1.classList.add("fade-out");
-    capa.classList.add("fade-in");
-    setTimeout(() => {
-      page1.style.display = "none";
-      capa.classList.remove("fade-in")
-      page1.classList.remove("fade-out")
-    }, 1000);
+    if (currentPage <= totalPages) {
+      console.log('Clique à esquerda');
+      currentPage--;
+      document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    }
   } else {
-    // Ir para a página 2
-    page1.classList.toggle("flip");
-    page2.style.display = "block";
-    page2.classList.add("fade-in");
+    if (currentPage <= totalPages) {
+      console.log(`page${currentPage}`);
+      document.getElementById(`page${currentPage}`).classList.add("flip");
+      currentPage++;
+    }
   }
 });
 
@@ -55,18 +56,14 @@ page2.addEventListener('click', function (event) {
   const middle = storyRect.left + storyRect.width / 2;
 
   if (clickPosition < middle) {
-    // Voltar para pg1
-    page2.classList.toggle("flip");
-    setTimeout(() => {
-      page2.style.display = "none";
-      page1.style.display = "block";
-    }, 300);
+    console.log('Clique à esquerda');
+    currentPage--;
+    document.getElementById(`page${currentPage}`).classList.toggle("flip");
 
   } else {
-    // Ir para a página 2
-    page2.classList.toggle("flip");
-    page3.style.display = "block";
-    page3.classList.add("fade-in");
+    console.log(`page${currentPage}`);
+    document.getElementById(`page${currentPage}`).classList.add("flip");
+    currentPage++;
   }
 });
 
@@ -79,17 +76,33 @@ page3.addEventListener('click', function (event) {
   const middle = storyRect.left + storyRect.width / 2;
 
   if (clickPosition < middle) {
-    // desvirar
-    page2.classList.toggle("flip");
-    setTimeout(() => {
-      page3.style.display = "none";
-      page2.style.display = "block";
-    }, 300);
+    console.log('Clique à esquerda');
+    currentPage--;
+    document.getElementById(`page${currentPage}`).classList.toggle("flip");
 
   } else {
-    page3.classList.toggle("flip");
-    setTimeout(() => {
-      document.getElementById("page3").style.display = "block";
-    }, 300);
+    console.log(`page${currentPage}`);
+    document.getElementById(`page${currentPage}`).classList.add("flip");
+    currentPage++;
+  }
+});
+
+// pg4
+page4.addEventListener('click', function (event) {
+  const storyRect = page4.getBoundingClientRect(); // Pega a posição da div
+  const clickPosition = event.clientX; // Pega a posição do clique na horizontal
+
+  // Calcula o meio da div
+  const middle = storyRect.left + storyRect.width / 2;
+
+  if (clickPosition < middle) {
+    console.log('Clique à esquerda');
+    currentPage--;
+    document.getElementById(`page${currentPage}`).classList.toggle("flip");
+
+  } else {
+    // console.log(`page${currentPage}`);
+    // document.getElementById(`page${currentPage}`).classList.add("flip");
+    // currentPage++;
   }
 });

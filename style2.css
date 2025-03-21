@@ -1,3 +1,29 @@
+/* Definir camadas das páginas */
+
+#page0 {
+    z-index: 4;
+}
+
+#page1 {
+    z-index: 3;
+}
+
+#page2 {
+    z-index: 2;
+}
+
+#page3 {
+    z-index: 1;
+}
+
+#page4 {
+    z-index: 0;
+}
+
+#page5 {
+    z-index: -1;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 * {
@@ -119,7 +145,8 @@ nav a {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: white;
+    background-image: url('imagens/04.JPG');
+    background-size: auto 100%; 
     border: 2px solid #ccc;
     display: flex;
     justify-content: center;
@@ -128,9 +155,7 @@ nav a {
     backface-visibility: hidden;
 }
 
-.front {
-    z-index: 2;
-}
+
 
 .back {
     transform: rotateY(180deg);
@@ -159,9 +184,7 @@ button:hover {
     background-color: #d73a5c;
 }
 
-.page{
-    display: none;
-}
+
 
 .fade-in {
     opacity: 0;
