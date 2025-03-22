@@ -1,4 +1,5 @@
-const myMusic= document.getElementById("music");
+const myMusic = document.getElementById("music");
+const myMusic2 = document.getElementById("music2");
 const page0 = document.getElementById('page0');
 const page1 = document.getElementById('page1');
 const page2 = document.getElementById('page2');
@@ -17,13 +18,11 @@ page0.addEventListener('click', function (event) {
   if (clickPosition < middle) {
     console.log('Clique à esquerda');
   } else {
-    if (currentPage <= totalPages) {
-      document.getElementById(`page${currentPage}`).classList.toggle("flip");
-      currentPage++;
-      console.log(`page${currentPage}`);
-      myMusic.play();
-
-    }
+    document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    currentPage++;
+    console.log(`page${currentPage}`);
+    myMusic.play();
+    myMusic2.play();
 
   }
 });
@@ -35,17 +34,17 @@ page1.addEventListener('click', function (event) {
   const middle = storyRect.left + storyRect.width / 2;
 
   if (clickPosition < middle) {
-    if (currentPage <= totalPages) {
-      console.log('Clique à esquerda');
-      currentPage--;
-      document.getElementById(`page${currentPage}`).classList.toggle("flip");
-    }
+    console.log('Clique à esquerda');
+    currentPage--;
+    document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    myMusic2.play();
+
   } else {
-    if (currentPage <= totalPages) {
-      document.getElementById(`page${currentPage}`).classList.toggle("flip");
-      currentPage++;
-      console.log(`page${currentPage}`);
-    }
+    document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    currentPage++;
+    console.log(`page${currentPage}`);
+    myMusic2.play();
+
   }
 });
 
@@ -59,15 +58,16 @@ page2.addEventListener('click', function (event) {
   const middle = storyRect.left + storyRect.width / 2;
 
   if (clickPosition < middle) {
-    if (currentPage <= totalPages) {
-      console.log('Clique à esquerda');
-      currentPage--;
-      document.getElementById(`page${currentPage}`).classList.toggle("flip");
-    }
+    console.log('Clique à esquerda');
+    currentPage--;
+    document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    myMusic2.play();
+
   } else {
     document.getElementById(`page${currentPage}`).classList.toggle("flip");
     currentPage++;
     console.log(`page${currentPage}`);
+    myMusic2.play();
   }
 });
 
@@ -80,15 +80,15 @@ page3.addEventListener('click', function (event) {
   const middle = storyRect.left + storyRect.width / 2;
 
   if (clickPosition < middle) {
-    if (currentPage <= totalPages) {
-      console.log('Clique à esquerda');
-      currentPage--;
-      document.getElementById(`page${currentPage}`).classList.toggle("flip");
-    }
+    console.log('Clique à esquerda');
+    currentPage--;
+    document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    myMusic2.play();
   } else {
     document.getElementById(`page${currentPage}`).classList.toggle("flip");
     currentPage++;
     console.log(`page${currentPage}`);
+    myMusic2.play();
   }
 });
 
@@ -101,15 +101,15 @@ page4.addEventListener('click', function (event) {
   const middle = storyRect.left + storyRect.width / 2;
 
   if (clickPosition < middle) {
-    if (currentPage <= totalPages) {
-      console.log('Clique à esquerda');
-      currentPage--;
-      document.getElementById(`page${currentPage}`).classList.toggle("flip");
-    }
+    console.log('Clique à esquerda');
+    currentPage--;
+    document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    myMusic2.play();
   } else {
     document.getElementById(`page${currentPage}`).classList.toggle("flip");
     currentPage++;
     console.log(`page${currentPage}`);
+    myMusic2.play();
   }
 });
 
@@ -123,11 +123,10 @@ page5.addEventListener('click', function (event) {
 
   if (clickPosition < middle) {
     console.log('Clique à esquerda');
-    if (currentPage <= totalPages) {
-      console.log('Clique à esquerda');
-      currentPage--;
-      document.getElementById(`page${currentPage}`).classList.toggle("flip");
-    }
+    console.log('Clique à esquerda');
+    currentPage--;
+    document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    myMusic2.play();
 
   } else {
     console.log(`page${currentPage}`);
