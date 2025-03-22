@@ -37,12 +37,14 @@ page1.addEventListener('click', function (event) {
     console.log('Clique à esquerda');
     currentPage--;
     document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    myMusic2.currentTime = 0; // Reinicia o áudio para garantir a reprodução
     myMusic2.play();
 
   } else {
     document.getElementById(`page${currentPage}`).classList.toggle("flip");
     currentPage++;
     console.log(`page${currentPage}`);
+    myMusic2.currentTime = 0; // Reinicia o áudio para garantir a reprodução
     myMusic2.play();
 
   }
@@ -61,12 +63,14 @@ page2.addEventListener('click', function (event) {
     console.log('Clique à esquerda');
     currentPage--;
     document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    myMusic2.currentTime = 0; // Reinicia o áudio para garantir a reprodução
     myMusic2.play();
 
   } else {
     document.getElementById(`page${currentPage}`).classList.toggle("flip");
     currentPage++;
     console.log(`page${currentPage}`);
+    myMusic2.currentTime = 0; // Reinicia o áudio para garantir a reprodução
     myMusic2.play();
   }
 });
@@ -83,11 +87,13 @@ page3.addEventListener('click', function (event) {
     console.log('Clique à esquerda');
     currentPage--;
     document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    myMusic2.currentTime = 0; // Reinicia o áudio para garantir a reprodução
     myMusic2.play();
   } else {
     document.getElementById(`page${currentPage}`).classList.toggle("flip");
     currentPage++;
     console.log(`page${currentPage}`);
+    myMusic2.currentTime = 0; // Reinicia o áudio para garantir a reprodução
     myMusic2.play();
   }
 });
@@ -104,11 +110,13 @@ page4.addEventListener('click', function (event) {
     console.log('Clique à esquerda');
     currentPage--;
     document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    myMusic2.currentTime = 0; // Reinicia o áudio para garantir a reprodução
     myMusic2.play();
   } else {
     document.getElementById(`page${currentPage}`).classList.toggle("flip");
     currentPage++;
     console.log(`page${currentPage}`);
+    myMusic2.currentTime = 0; // Reinicia o áudio para garantir a reprodução
     myMusic2.play();
   }
 });
@@ -126,9 +134,17 @@ page5.addEventListener('click', function (event) {
     console.log('Clique à esquerda');
     currentPage--;
     document.getElementById(`page${currentPage}`).classList.toggle("flip");
+    myMusic2.currentTime = 0; // Reinicia o áudio para garantir a reprodução
     myMusic2.play();
 
   } else {
     console.log(`page${currentPage}`);
+  }
+});
+
+document.addEventListener("visibilitychange", function () {
+  if (document.hidden) {
+    myMusic.pause();
+    myMusic2.pause();
   }
 });
