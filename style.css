@@ -185,3 +185,43 @@ button {
 button:hover {
     background-color: #d73a5c;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+.poema-container {
+  position: relative;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  background: linear-gradient(to bottom, #ff99cc, #ffccff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.petalas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url('imagens/ChatGPT\ Image\ 22\ de\ abr.\ de\ 2025\,\ 20_47_32.png'); /* pétala png com fundo transparente */
+  background-repeat: repeat;
+  animation: cair 10s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes cair {
+  0% {
+    background-position: 0 -100px;
+  }
+  100% {
+    background-position: 0 1000px;
+  }
+}
