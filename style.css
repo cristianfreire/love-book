@@ -64,7 +64,7 @@ h1 {
 p {
     font-family: 'Dancing Script', cursive;
     font-size: 1rem;
-    color: #333;
+    color: #000000;
 }
 
 nav ul {
@@ -200,7 +200,7 @@ button:hover {
     /* pétala png com fundo transparente */
     background-repeat: repeat;
     animation: cair 10s linear infinite;
-    opacity: 0.4;
+    opacity: 1;
 }
 
 
